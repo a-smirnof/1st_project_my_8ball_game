@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import kotlin.random.Random
+import java.util.Random
+
+//import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val ballImageView: ImageView = findViewById(R.id.imageView)
 
-        val randomChoice = java.util.Random().nextInt(20) + 1
+        val randomChoice = Random().nextInt(20) + 1
         val imageResource = when (randomChoice){
             1 -> R.drawable.mb1
             2 -> R.drawable.mb2
